@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --top-sticky-height: 50px;
+    --narration-margin: 20px;
+    --narration-width: 750px;
+    --title-padding: 5px;
+}
+
+body {
+    background-color: darkgray;
+}
+
+#sticky {
+    position: sticky;
+    top: 0;
+    height: var(--top-sticky-height);
+    background-color: white;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+    z-index: 1000;
+}
+
+#title {
+    display: inline-block;
+    padding: var(--title-padding);
+    padding-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: calc(var(--top-sticky-height) - 2 * var(--title-padding));
+    vertical-align: middle;
+}
+
+#dropzone {
+    width: 100%;
+    min-height: calc(100vh - var(--top-sticky-height) - 2 * var(--narration-margin));
+    vertical-align: middle;
+    line-height: 100%;
+}
+
+#narration {
+    width: var(--narration-width);
+    min-height: calc(100vh - var(--top-sticky-height) - 2 * var(--narration-margin));
+    margin: var(--narration-margin) auto;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+    padding: 30px 20px;
+    line-height: 2.0;
+}
+
+/**
+ * Clipboard
+ */
+pre {
+    position: relative;
+}
+
+.clipboard-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 7px 5px 7px;
+    margin: 5px;
+    color: #767676;
+    border-color: #767676;
+    background-color: #ededed;
+    border: 1px solid;
+    border-radius: 6px;
+    font-size: 0.8em;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.clipboard-button>svg {
+    fill: #767676;
+}
+
+.clipboard-button:hover {
+    cursor: pointer;
+    border-color: #696969;
+    background-color: #e0e0e0;
+}
+
+.clipboard-button:hover>svg {
+    fill: #696969;
+}
+
+.clipboard-button:focus {
+    outline: 0;
+}
+
+.highlight {
+    position: relative;
+}
+
+pre:hover>.clipboard-button {
+    opacity: 1;
+    transition: 0.2s;
+}
