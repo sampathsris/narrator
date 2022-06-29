@@ -7,8 +7,8 @@
   "scripts": {
     "start": "node index.js"
   },
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "live-server": "^1.2.2"
-  }
+  },
+  "dependencies": {}
 }
