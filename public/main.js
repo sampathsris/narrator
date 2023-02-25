@@ -58,9 +58,9 @@ function handleContent({ file, content }) {
 }
 
 function loadFile(file, callback) {
-    const reader = new FileReader();
-    reader.onloadend = () => {
-        callback({
+	const reader = new FileReader();
+	reader.onloadend = () => {
+		callback({
 			file,
 			content: reader.result
 		});

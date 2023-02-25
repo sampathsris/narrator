@@ -9,17 +9,18 @@
     --narration-margin: 20px;
     --narration-width: 750px;
     --title-padding: 5px;
+    color-scheme: dark;
 }
 
 body {
-    background-color: darkgray;
+    background-color: #161b22;
 }
 
 #sticky {
     position: sticky;
     top: 0;
     height: var(--top-sticky-height);
-    background-color: white;
+    background-color: #161b22;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
     z-index: 1000;
 }
@@ -49,6 +50,7 @@ body {
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
     padding: 30px 20px;
     line-height: 2.0;
+    color-scheme: dark;
 }
 
 /**
